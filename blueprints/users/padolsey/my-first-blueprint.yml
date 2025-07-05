@@ -1,0 +1,6 @@
+title: "My First Blueprint"
+description: "A test to see how different models respond to my prompts."
+---
+- prompt: "Your first prompt here."
+  should:
+    - "An expectation for the response."
