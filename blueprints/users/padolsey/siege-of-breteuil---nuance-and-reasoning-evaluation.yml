@@ -1,0 +1,70 @@
+title: "Siege of Breteuil - Nuance and Reasoning Evaluation"
+description: "Evaluates an LLM's ability to understand the complex motivations, strategic decisions, and interconnected events surrounding the Siege of Breteuil, focusing on subtle distinctions and causal relationships rather than simple fact recall."
+prompts:
+  - prompt: "Describe the strategic significance of Breteuil during its siege in 1356, considering both its military value and its symbolic importance to the French king."
+    should:
+      - "States that Breteuil was strategically unimportant as a fortification."
+      - "Explains that taking Breteuil became a matter of prestige for John II."
+      - "Mentions John II's refusal to abandon the siege despite its lack of progress, due to concerns about undermining his prestige as a warrior-king."
+    should_not:
+      - "Claims Breteuil was a critical strategic location for military operations."
+      - "Suggests John II abandoned the siege due to military futility alone."
+  - prompt: "Explain the primary reasons why the French forces under John II struggled to capture Breteuil, despite their numerical superiority and initial efforts."
+    should:
+      - "Mentions that Breteuil was well-garrisoned."
+      - "States that the town had been provisioned by Lancaster with enough food for a year."
+      - "Notes that the French attempts to mine under the walls were unsuccessful."
+      - "Describes the failure of the mobile siege tower assault, including it being set on fire by defenders."
+    should_not:
+      - "Attributes the French failure solely to a lack of effort or commitment."
+      - "Suggests the French lacked the necessary siege technology."
+  - prompt: "Analyze the sequence of events that led to the Battle of Poitiers, specifically detailing how the siege of Breteuil influenced John II's decisions regarding the Black Prince's chevauchée."
+    should:
+      - "Explains that John II initially refused to march against the Black Prince, prioritizing the siege of Breteuil."
+      - "States that John II declared the Breteuil garrison a more serious threat than the Black Prince."
+      - "Describes how John II eventually yielded to pressure to confront the Black Prince due to the devastation in south-west France."
+      - "Connects the eventual abandonment of the Breteuil siege (via bribe and free passage) to the concentration of French forces at Chartres to oppose the Black Prince."
+      - "Mentions John II pursuing and cutting off the Black Prince's retreat, leading to Poitiers."
+    should_not:
+      - "Implies John II immediately abandoned the siege to confront the Black Prince."
+      - "Suggests the Battle of Poitiers was an unrelated event to the siege."
+  - prompt: "Compare and contrast the initial French siege of Breteuil with the renewed siege, highlighting any differences in command, progress, or notable events."
+    should:
+      - "Identifies the first siege as being interrupted by Henry, Earl of Lancaster's relief force."
+      - "Notes that John II took personal charge of the second siege."
+      - "Mentions the second siege attracted praise for its splendor and high-status participants."
+      - "Highlights the failure of the large mobile siege tower (belfry) during the second siege."
+      - "States that both sieges made little progress due to the town's strong defenses and provisions."
+    should_not:
+      - "Claims the first siege was successful."
+      - "Suggests the second siege was significantly more effective than the first."
+  - prompt: "Discuss the political and military implications of Charles II of Navarre's imprisonment and the subsequent actions of his partisans, particularly in relation to the events in Normandy leading up to the siege of Breteuil."
+    should:
+      - "Explains that Charles II of Navarre was arrested by John II along with other outspoken nobles."
+      - "States that Charles II was one of the largest landholders in Normandy."
+      - "Mentions that Norman nobles who were not arrested sent messages to Navarre and sought assistance from Edward III."
+      - "Connects the pro-Navarrese sentiment in the Cotentin area to the French focus on suppressing Navarrese strongholds in central Normandy."
+      - "Notes that Charles II was imprisoned throughout the siege of Breteuil and later released by his partisans."
+    should_not:
+      - "Suggests Charles II of Navarre was a loyal ally of John II."
+      - "Implies Charles II was actively involved in the defense of Breteuil during the siege."
+  - prompt: "Evaluate the effectiveness of Henry, Earl of Lancaster's intervention in Normandy in 1356. What were his immediate objectives, and how successful was he in achieving them?"
+    should:
+      - "States that Lancaster's primary objective was to relieve and resupply Breteuil."
+      - "Confirms that Lancaster successfully resupplied Breteuil, allowing it to withstand a siege for a year."
+      - "Mentions Lancaster's avoidance of a direct battle with John II's much larger French army."
+      - "Notes Lancaster's actions in provisioning Pont-Audemer and detaching men to reinforce its garrison."
+      - "Describes Lancaster's subsequent march, looting, and capture of Verneuil."
+    should_not:
+      - "Claims Lancaster engaged in a major battle with John II's forces."
+      - "Suggests Lancaster's intervention led to the immediate end of the siege of Breteuil."
+  - prompt: "Explain the circumstances under which the Truce of Calais was agreed upon and its subsequent fate, detailing how it influenced the resumption of full-scale conflict between England and France."
+    should:
+      - "States the Truce of Calais was agreed upon due to both sides being financially exhausted after the Battle of Crécy and Siege of Calais."
+      - "Mentions it was intended as a temporary halt to fighting and strongly favored the English, confirming their territorial gains."
+      - "Explains it was extended repeatedly but formally set aside in 1355."
+      - "Notes that the truce did not stop ongoing naval clashes or small-scale fighting in Gascony and Brittany."
+      - "Connects its expiration and the non-ratification of the Treaty of Guînes to the commitment of both sides to full-scale war in 1355."
+    should_not:
+      - "Claims the Truce of Calais completely ended all hostilities."
+      - "Suggests the truce was a long-term peace agreement."
